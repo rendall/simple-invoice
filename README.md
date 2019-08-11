@@ -1,11 +1,14 @@
 # Simple Invoice
+
+<https://rendall.github.io/simple-invoice/>
+
 A simple, editable web-based invoice that 
 - calculates subtotal, taxes and total and 
 - saves your edit for when you return
 
 ## Instructions
 
-- View the web-page (index.html) in a browser
+- View the web-page <https://rendall.github.io/simple-invoice/> in a browser
 - Edit each field. Press tab to go to the next editable field
 - Your edits are saved automatically via cookies
 - Note that subtotal, taxes and total are recalculated when 'item' changes
