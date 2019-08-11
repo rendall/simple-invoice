@@ -51,6 +51,7 @@ const populateInvoice = () => {
     const key = k.split("__")[1];
     const value = kv[1];
     document.querySelector(`.${itemId} .${key}`).innerText = value;
+  });
 }
 
 const initialize = () => {
