@@ -17,6 +17,7 @@ A simple, editable web-based invoice that
 ## Limitations
 
 - Euro-centric: uses Euros, calculates VAT
+- Finn-centric: uses Finnish date locale
 - Local save: saves cookies only to your local storage
 - One itemization row only
 
