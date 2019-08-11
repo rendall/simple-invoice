@@ -18,6 +18,7 @@
   flex-wrap: wrap;
   margin-bottom: 2rem;
   justify-content: space-between;
+  align-items: flex-end;
 }
 
 .invoice-info > * {
