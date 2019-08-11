@@ -6,6 +6,14 @@ const save = (e) => {
   document.cookie = `${key}=${value}`
 }
 
+const makeTitle = () => {
+  const companyName = document.querySelector(".company-name").innerText
+  const invoiceLabel = document.querySelector(".invoice-number__label").innerText
+  const invoiceValue = document.querySelector(".invoice-number__value" ).innerText
+
+  document.title = `${companyName} ${invoiceLabel}${invoiceValue}`.replace(/[^\s\d\w\.#]/g,"")
+}
+
 const calculate = () => {
   const items = Array.from(document.querySelectorAll("tr.item"))
   const parseValue = (str) => parseFloat(str.replace(",", ".").replace(/[^\.\d]/g, ""))
@@ -30,12 +38,13 @@ const populateInvoice = () => {
     document.querySelector(`.${kv[0]}`).innerText = kv[1]
     if (kv[0]==="company-name") document.title = kv[1]
   })
-  if (document.querySelector(".invoice-created__value").innerText.trim() === "") document.querySelector(".invoice-created__value").innerText = new Date().toLocaleDateString();
-  const dueIn = 2505600000; // 30 days of time in milliseconds 
-  if (document.querySelector(".invoice-due__value").innerText.trim() === "") document.querySelector(".invoice-due__value").innerText = new Date(Date.now() + dueIn).toLocaleDateString();
+  if (document.querySelector(".invoice-created__value").innerText.trim() === "") document.querySelector(".invoice-created__value").innerText = new Date().toLocaleDateString()
+  const dueIn = 2505600000 // 30 days of time in milliseconds 
+  if (document.querySelector(".invoice-due__value").innerText.trim() === "") document.querySelector(".invoice-due__value").innerText = new Date(Date.now() + dueIn).toLocaleDateString()
 }
 
 const initialize = () => {
+  window.addEventListener("beforeprint", makeTitle)
   const editables = Array.from(document.querySelectorAll("[contenteditable]"))
   editables.forEach(e => e.addEventListener("input", save))
   const tableValues = Array.from(document.querySelectorAll("table.itemization .item [contenteditable]"))
