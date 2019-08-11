@@ -43,6 +43,14 @@ const populateInvoice = () => {
   if (document.querySelector(".invoice-created__value").innerText.trim() === "") document.querySelector(".invoice-created__value").innerText = new Date().toLocaleDateString()
   const dueIn = 2505600000 // 30 days of time in milliseconds 
   if (document.querySelector(".invoice-due__value").innerText.trim() === "") document.querySelector(".invoice-due__value").innerText = new Date(Date.now() + dueIn).toLocaleDateString()
+  const items = keyValues.filter(kv => /^item-\d?/.test(kv))
+  items.forEach(i => {
+    const kv = i.split("=");
+    const k = kv[0]
+    const itemId = k.split("__")[0];
+    const key = k.split("__")[1];
+    const value = kv[1];
+    document.querySelector(`.${itemId} .${key}`).innerText = value;
 }
 
 const initialize = () => {
