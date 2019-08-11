@@ -26,6 +26,7 @@ Nothing more planned, but please make suggestions if you would find this useful
 
 Possibilities, if there is demand:
 - Add / remove itemization rows
+- Change / remove tax label and rate
 - Choose localization (e.g. "US", "FI", etc) for currency and date formats
 
 ## Privacy Policy
