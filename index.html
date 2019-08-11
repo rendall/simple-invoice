@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Simple Invoice</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body class="invoice">
+    <section class="invoice-info">
+        <h1 class="company-name" contenteditable="true">Company Name</h1>
+        <div class="invoice-detail">
+            <div class="invoice-number">
+                <div class="invoice-number__label info-label" contenteditable="true">Invoice #:</div>
+                <div class="invoice-number__value info-value" contenteditable="true">001</div>
+            </div>
+            <div class="invoice-created">
+                <div class="invoice-created__label info-label" contenteditable="true">Created:</div>
+                <div class="invoice-created__value info-value" contenteditable="true">&nbsp;</div>
+            </div>
+            <div class="invoice-due">
+                <div class="invoice-due__label info-label" contenteditable="true">Due:</div>
+                <div class="invoice-due__value info-value" contenteditable="true">&nbsp;</div>
+            </div>
+        </div>
+        <div class="payee-info">
+            <div class="payee-street" contenteditable="true">Seller street address</div>
+            <div class="payee-town" contenteditable="true">Seller postal code and city</div>
+            <div class="payee-id">
+                <div class="payee-id__label info-label" contenteditable="true">Company ID:</div>
+                <div class="payee-id__value info-value" contenteditable="true">00000-0</div>
+            </div>
+            <div class="payee-bank">
+                <div class="payee-bank__label info-label" contenteditable="true">BIC:</div>
+                <div class="payee-bank__value info-value" contenteditable="true">BANKIDXX</div>
+            </div>
+            <div class="payee-account">
+                <div class="payee-account__label info-label" contenteditable="true">IBAN:</div>
+                <div class="payee-account__value info-value" contenteditable="true">ID00 0000 0000 0000 00</div>
+            </div>
+        </div>
+        <div class="payer-info">
+            <div class="payer-name" contenteditable="true">Buyer Company Name LLC</div>
+            <div class="payer-street" contenteditable="true">Buyer street address</div>
+            <div class="payer-city" contenteditable="true">Buyer postal code and city</div>
+            <div class="payer-ref">
+                <div class="payer-ref__label info-label" contenteditable="true">Reference number:</div>
+                <div class="payer-ref__value info-value" contenteditable="true">#0000</div>
+            </div>
+        </div>
+    </section>
+    <table class="itemization">
+        <tr class="header">
+            <td class="header_description" contenteditable="true">Description</td>
+            <td class="header_quantity" contenteditable="true">Quantity</td>
+            <td class="header_price" contenteditable="true">Price</td>
+        </tr>
+        <tr class="item">
+            <td class="description" contenteditable="true">description of service</td>
+            <td class="quantity" contenteditable="true">200 hr</td>
+            <td class="price" contenteditable="true">100€</td>
+        </tr>
+        <tr class="subtotal">
+            <td colspan="2">Sub total:</td>
+            <td contenteditable="true">&nbsp;</td>
+        </tr>
+        <tr class="taxes">
+            <td colspan="2">VAT (24%):</td>
+            <td contenteditable="true">&nbsp;</td>
+        </tr>
+        <tr class="total">
+            <td colspan="2">Total:</td>
+            <td contenteditable="true">&nbsp;</td>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+</body>
+
+</html>
