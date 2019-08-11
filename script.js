@@ -6,6 +6,8 @@ const save = (e) => {
   document.cookie = `${key}=${value}`
 }
 
+const onFocus = (e) => document.execCommand('selectAll', false, null)
+
 const makeTitle = () => {
   const companyName = document.querySelector(".company-name").innerText
   const invoiceLabel = document.querySelector(".invoice-number__label").innerText
@@ -47,6 +49,7 @@ const initialize = () => {
   window.addEventListener("beforeprint", makeTitle)
   const editables = Array.from(document.querySelectorAll("[contenteditable]"))
   editables.forEach(e => e.addEventListener("input", save))
+  editables.forEach(e => e.addEventListener("focus", onFocus))
   const tableValues = Array.from(document.querySelectorAll("table.itemization .item [contenteditable]"))
   tableValues.forEach(e => e.addEventListener("input", calculate))
   populateInvoice()
