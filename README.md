@@ -21,6 +21,12 @@ A simple, editable web-based invoice that
 - Local save: saves cookies only to your local storage
 - One itemization row only
 
+## Technical Support / Suggestions / Feedback
+
+- Go to <https://github.com/rendall/simple-invoice/issues/new>
+- Give the issue a descriptive title
+- Describe the situation
+
 ## Roadmap
 
 Nothing more planned, but please make suggestions if you would find this useful 
