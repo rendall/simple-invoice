@@ -1,19 +1,20 @@
 const save = (e) => {
   const keyName = e.target.classList[0]
   const value = e.target.innerText
-  const rowIndex = (!!e.target.parentElement.rowIndex) ? e.target.parentElement.rowIndex : 0
+  const isItem = Array.from(e.target.parentElement.classList).some( c => /item-\d?/.test(c));
+  const rowIndex = isItem? e.target.parentElement.rowIndex : 0
   const key = rowIndex === 0 ? keyName : `item-${rowIndex}__${keyName}`
   document.cookie = `${key}=${value}`
 }
 
-const onFocus = (e) => document.execCommand('selectAll', false, null)
+const onFocus = (e) => document.execCommand("selectAll", false, null)
 
 const makeTitle = () => {
   const companyName = document.querySelector(".company-name").innerText
   const invoiceLabel = document.querySelector(".invoice-number__label").innerText
-  const invoiceValue = document.querySelector(".invoice-number__value" ).innerText
+  const invoiceValue = document.querySelector(".invoice-number__value").innerText
 
-  document.title = `${companyName} ${invoiceLabel}${invoiceValue}`.replace(/[^\s\d\w\.#]/g,"")
+  document.title = `${companyName} ${invoiceLabel}${invoiceValue}`.replace(/[^\s\d\w\.#]/g, "")
 }
 
 const calculate = () => {
@@ -33,16 +34,17 @@ const calculate = () => {
 }
 
 const populateInvoice = () => {
-  const keyValues = document.cookie.split(';').map(c => c.trim())
+  const keyValues = document.cookie.split(";").map(c => c.trim())
   const info = keyValues.filter(kv => !/^item-\d?/.test(kv))
   info.filter(i => i.length > 0).forEach(i => {
-    const kv = i.split('=')
+    const kv = i.split("=")
     document.querySelector(`.${kv[0]}`).innerText = kv[1]
-    if (kv[0]==="company-name") document.title = kv[1]
+    if (kv[0] === "company-name") document.title = kv[1]
   })
   if (document.querySelector(".invoice-created__value").innerText.trim() === "") document.querySelector(".invoice-created__value").innerText = new Date().toLocaleDateString("fi")
   const dueIn = 2505600000 // 30 days of time in milliseconds 
   if (document.querySelector(".invoice-due__value").innerText.trim() === "") document.querySelector(".invoice-due__value").innerText = new Date(Date.now() + dueIn).toLocaleDateString("fi")
+
   const items = keyValues.filter(kv => /^item-\d?/.test(kv))
   items.forEach(i => {
     const kv = i.split("=");
@@ -50,8 +52,10 @@ const populateInvoice = () => {
     const itemId = k.split("__")[0];
     const key = k.split("__")[1];
     const value = kv[1];
+
     document.querySelector(`.${itemId} .${key}`).innerText = value;
   });
+  console.log(items);
 }
 
 const initialize = () => {
