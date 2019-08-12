@@ -55,7 +55,6 @@ const populateInvoice = () => {
 
     document.querySelector(`.${itemId} .${key}`).innerText = value;
   });
-  console.log(items);
 }
 
 const initialize = () => {
