@@ -2,9 +2,14 @@
 
 <https://rendall.github.io/simple-invoice/>
 
-A simple, editable web-based invoice that 
-- calculates subtotal, taxes and total and 
-- saves your edit for when you return
+A simple, secure, editable web-based invoice that
+
+- Requires absolutely nothing from you
+- Calculates itemization subtotal, taxes and total
+- Saves your edit for when you return
+- Customizable fields
+- Localizable / internationalizable
+- Minimal style
 
 ## Instructions
 
@@ -20,6 +25,7 @@ A simple, editable web-based invoice that
 - Finn-centric: uses Finnish date locale
 - Local save: saves cookies only to your local storage
 - One itemization row only
+- Minimal style is fixed
 
 ## Technical Support / Suggestions / Feedback
 
@@ -29,7 +35,7 @@ A simple, editable web-based invoice that
 
 ## Roadmap
 
-Nothing more planned, but please make suggestions if you would find this useful 
+Nothing more planned, but please make suggestions if you would find this useful
 
 Possibilities, if there is demand:
 - Add / remove itemization rows
