@@ -19,7 +19,7 @@ const makeTitle = () => {
 
 const calculate = () => {
   const items = Array.from(document.querySelectorAll("tr.item"))
-  const parseValue = (str) => parseFloat(str.replace(",", ".").replace(/[^\.\d]/g, ""))
+  const parseValue = (str) => parseFloat(str.replace(",", ".").replace(/[^\.\d\-]/g, ""))
   const getValue = (tr, index) => parseValue(tr.children[index].innerText)
   const getQuantity = (tr) => getValue(tr, 1)
   const getPrice = (tr) => getValue(tr, 2)
