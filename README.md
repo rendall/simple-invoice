@@ -19,10 +19,20 @@ A simple, secure, editable web-based invoice that
 - Note that subtotal, taxes and total are recalculated when 'item' changes
 - When ready, press the print command from your browser
 
+### Run locally?
+
+- [Clone it!](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+- [Install node](https://nodejs.dev/learn/how-to-install-nodejs)
+- In the terminal, navigate to project directory and type `npx http-server`
+- Follow instructions in the terminal, likely it is to open <http://localhost:8080>
+
 ## Limitations
 
 - Euro-centric: uses Euros, calculates VAT
+  - But you can change € to any other symbol
+  - And you can delete or change the tax line
 - Finn-centric: uses Finnish date locale
+  - Always editable
 - Local save: saves cookies only to your local storage
 - One itemization row only
 - Minimal style is fixed
