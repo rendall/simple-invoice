@@ -4,7 +4,7 @@ const save = (e) => {
   const isItem = Array.from(e.target.parentElement.classList).some( c => /item-\d?/.test(c));
   const rowIndex = isItem? e.target.parentElement.rowIndex : 0
   const key = rowIndex === 0 ? keyName : `item-${rowIndex}__${keyName}`
-  document.cookie = `${key}=${value}`
+  document.cookie = `${key}=${value}; expires=Fri, 31 Dec 9999 23:59:59 GMT`
 }
 
 const onFocus = (e) => document.execCommand("selectAll", false, null)
@@ -60,7 +60,7 @@ const populateInvoice = () => {
 const initialize = () => {
   window.addEventListener("beforeprint", makeTitle)
   const editables = Array.from(document.querySelectorAll("[contenteditable]"))
-  editables.forEach(e => e.addEventListener("input", save))
+  editables.forEach(e => e.addEventListener("blur", save))
   editables.forEach(e => e.addEventListener("focus", onFocus))
   const tableValues = Array.from(document.querySelectorAll("table.itemization .item [contenteditable]"))
   tableValues.forEach(e => e.addEventListener("input", calculate))
