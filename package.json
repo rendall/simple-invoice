@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "start": "http-server --open",
+    "start": "http-server -a localhost",
     "watch": "tsc --watch"
   },
   "repository": {
