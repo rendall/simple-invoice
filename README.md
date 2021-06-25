@@ -9,20 +9,22 @@ A simple, secure, editable web-based invoice that
 - Saves your edit for when you return
 - Customizable fields
 - Localizable / internationalizable
-- Minimal style
+- Minimal, seek design
+
+![simple-invoice](https://user-images.githubusercontent.com/293263/123436029-e06eaf80-d5d6-11eb-887b-86d50644633f.png)
 
 ## Instructions
 
 - View the web-page <https://rendall.github.io/simple-invoice/> in a browser
 - Edit each field. Press tab to go to the next editable field
-- Your edits are saved automatically via cookies
-- Note that subtotal, taxes and total are recalculated when 'item' changes
+  - Your edits are saved automatically via cookies
+  - Note that _subtotal_, _VAT_ and _total_ are recalculated when the line-item changes
 - When ready, press the print command from your browser
   - For printer (or _destination_) select **Save as PDF**
-### Newsletter
 
-[Sign up to receive information](https://forms.gle/Z2emMmFxmV52pDzu8) about updates to Simple Invoice. Your information will be used for no other purpose, nor shared with anyone else.
+### Simple Invoice Newsletter
 
+[Sign up to receive information and updates](https://forms.gle/Z2emMmFxmV52pDzu8). Your information will be used for no other purpose, nor shared with anyone else.
 
 ### Run locally?
 
@@ -50,9 +52,6 @@ A simple, secure, editable web-based invoice that
 
 ## Roadmap
 
-Nothing more planned, but please make suggestions if you would find this useful
-
-Possibilities, if there is demand:
 - Add / remove itemization rows
 - Change / remove tax label and rate
 - Choose localization (e.g. "US", "FI", etc.) for currency and date formats
@@ -65,6 +64,7 @@ The `script.ts` file compiles into `script.js`, which is loaded by `index.html` 
  - `npm run build`
  - `npm run start`
    - <http://localhost:8080>
+
 ## Privacy Policy
 
-Data is collected and stored only in your local browser and so is entirely, and only, under your control. Simple Invoice has no interest in collecting this data. This will be the Simple Invoice policy from now until the end of time.
+Data is collected and stored only in your local browser and so is entirely and only under your control. Simple Invoice has no interest in collecting this data nor ever will until the end of time.
