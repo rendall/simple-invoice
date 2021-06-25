@@ -18,12 +18,16 @@ A simple, secure, editable web-based invoice that
 - Your edits are saved automatically via cookies
 - Note that subtotal, taxes and total are recalculated when 'item' changes
 - When ready, press the print command from your browser
+### Newsletter
+
+[Sign up to receive information](https://forms.gle/Z2emMmFxmV52pDzu8) about updates to Simple Invoice. Your information will be used for no other purpose, nor shared with anyone else.
+
 
 ### Run locally?
 
 - [Clone it!](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 - [Install node](https://nodejs.dev/learn/how-to-install-nodejs)
-- In the terminal, navigate to project directory and type `npx http-server`
+- In the terminal, navigate to project directory and type `npm run start` or `npx http-server -a localhost`
 - Follow instructions in the terminal, likely it is to open <http://localhost:8080>
 
 ## Limitations
