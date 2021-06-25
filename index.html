@@ -51,29 +51,32 @@
         </div>
     </section>
     <table class="itemization">
-        <!-- use a table because this is exactly the purpose of the table tag -->
-        <tr class="header">
-            <td class="header_description" contenteditable="true">Description</td>
-            <td class="header_quantity" contenteditable="true">Quantity</td>
-            <td class="header_price" contenteditable="true">Price</td>
-        </tr>
-        <tr class="item item-1">
-            <td class="description" contenteditable="true">description of service</td>
-            <td class="quantity" contenteditable="true">0 hr</td>
-            <td class="price" contenteditable="true">10€/hr</td>
-        </tr>
-        <tr class="subtotal">
-            <td colspan="2" class="subtotal__label" contenteditable="true">Sub total:</td>
-            <td class="subtotal__value" contenteditable="true">&nbsp;</td>
-        </tr>
-        <tr class="taxes">
-            <td colspan="2" class="taxes__value" contenteditable="true">VAT (24%):</td>
-            <td class="taxes__value" contenteditable="true">&nbsp;</td>
-        </tr>
-        <tr class="total">
-            <td colspan="2" class="total__label" contenteditable="true">Total:</td>
-            <td class="total__value" contenteditable="true">&nbsp;</td>
-        </tr>
+        <thead>
+            <tr class="header">
+                <th class="header_description" contenteditable="true">Description</th>
+                <th class="header_quantity" contenteditable="true">Quantity</th>
+                <th class="header_price" contenteditable="true">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="item item-1">
+                <td class="item-1__description" contenteditable="true">description of service</td>
+                <td class="item-1__quantity" contenteditable="true">0 hr</td>
+                <td class="item-1__price" contenteditable="true">10€/hr</td>
+            </tr>
+            <tr class="subtotal">
+                <td colspan="2" class="subtotal__label" contenteditable="true">Sub total:</td>
+                <td class="subtotal__value" contenteditable="true">&nbsp;</td>
+            </tr>
+            <tr class="taxes">
+                <td colspan="2" class="taxes__label" contenteditable="true">VAT (24%):</td>
+                <td class="taxes__value" contenteditable="true">&nbsp;</td>
+            </tr>
+            <tr class="total">
+                <td colspan="2" class="total__label" contenteditable="true">Total:</td>
+                <td class="total__value" contenteditable="true">&nbsp;</td>
+            </tr>
+        </tbody>
     </table>
     <script src="script.js"></script>
 </body>

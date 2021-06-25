@@ -52,6 +52,14 @@ Possibilities, if there is demand:
 - Change / remove tax label and rate
 - Choose localization (e.g. "US", "FI", etc.) for currency and date formats
 
+## Development
+
+The `script.ts` file compiles into `script.js`, which is loaded by `index.html` when displayed by a web server
+
+ - `npm install`
+ - `npm run build`
+ - `npm run start`
+   - <http://localhost:8080>
 ## Privacy Policy
 
-No data is collected whatsoever nor will ever be. Saved invoice edits are stored locally in your browser only
+Data is collected and stored only in your local browser and so is entirely, and only, under your control. Simple Invoice has no interest in collecting this data. This will be the Simple Invoice policy from now until the end of time.
