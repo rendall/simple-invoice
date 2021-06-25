@@ -11,7 +11,7 @@ A simple, secure, editable web-based invoice that
 - Localizable / internationalizable
 - Minimal, seek design
 
-![simple-invoice](https://user-images.githubusercontent.com/293263/123436029-e06eaf80-d5d6-11eb-887b-86d50644633f.png)
+[![simple-invoice](https://user-images.githubusercontent.com/293263/123436029-e06eaf80-d5d6-11eb-887b-86d50644633f.png)](https://rendall.github.io/simple-invoice/)
 
 ## Instructions
 
